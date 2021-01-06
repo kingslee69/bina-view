@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+} */
+
+.nav-item {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--dark-secondary);
+}
+
+.nav-item:focus {
+  color: var(--dark);
+  transition: 0.2s ease-out 0.1s;
+}
+
+.nav-item:hover {
+  transition: 0.2s ease-out 0.1s;
+  transition-delay: 0.2s;
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.btn-info {
+  color: #fff !important;
+  background-color: var(--brand) !important;
+  border-color: var(--brand) !important;
+  opacity: 0.85;
+}
+
+.btn-info:hover {
+  transition: 0.2s ease-out 0.1s;
+  opacity: 1;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  box-shadow: 0px 5px 12px rgba(44, 44, 49, 0.089);
+  z-index: 10000;
+}
+
+.mobile {
+  display: none !important;
+}
+
+.temp {
+  border-bottom: solid 1px var(--dark-secondary) !important;
+}
+
+.body {
+  line-height: 170%;
+  color: var(--dark-tetiary) !important;
+}
+
+.header {
+  font-weight: normal !important;
+  font-size: 4rem !important;
+  line-height: 75px;
+  color: var(--dark) !important;
+  margin-bottom: 2rem;
+}
+
+.service-card {
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0px 5px 20px rgba(44, 44, 49, 0.1);
+  max-width: 950px;
+  margin: 30px 0;
+}
+
+.service-img {
+  border-radius: 6px 0 0 6px;
+  max-width: 450px;
+  height: auto;
+  padding: 0 !important;
+}
+
+/* The animator css */
+/* .animate-up {
+  transform: translateY(+100px);
+  opacity: 0;
+} */
+
+.animate-down {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.down {
+  transform: translateY(0);
+  transition: all ease-out 0.4s;
+  opacity: 1;
+}
+
+.up {
+  transform: translateY(0) !important;
+  transition: all ease-out 1s;
+  opacity: 1;
+}
+/* The animator css ends here */
+
+@media (max-width: 992px) {
+  .service-card {
+    max-width: 500px;
+  }
+
+  .service-img {
+    border-radius: 6px 6px 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 3rem !important;
+    margin-bottom: 2rem;
+  }
+
+  .desktop {
+    display: none !important;
+  }
+
+  #nav-contact {
+    margin: 1rem auto;
+  }
+
+  .mobile {
+    display: block !important;
+  }
+
+  .nav-dropdown {
+    width: 100%;
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-dropdown > a {
+    display: block;
+    text-align: center;
+    line-height: 300%;
+    border-bottom: 1px solid var(--dark-secondary);
   }
 }
