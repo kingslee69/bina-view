@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import brandingImg from '../../images/branding.jpg';
-import strategyImg from '../../images/strategy.jpg';
-import digitalImg from '../../images/digital.jpg';
+// import strategyImg from '../../images/strategy.jpg';
+// import digitalImg from '../../images/digital.jpg';
 
 class Service extends Component {
   render() {

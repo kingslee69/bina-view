@@ -7,9 +7,12 @@ import 'bootstrap/dist/css/bootstrap.css';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <React.Fragment>
+    <BrowserRouter>
+      {console.log(process.env)}
+      <App />
+    </BrowserRouter>
+  </React.Fragment>,
   document.getElementById('root')
 );
 
